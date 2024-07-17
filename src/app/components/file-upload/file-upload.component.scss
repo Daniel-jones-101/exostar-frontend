@@ -1,0 +1,25 @@
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 2px dashed #ccc;
+  border-radius: 10px;
+  margin: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  input[type="file"] {
+    margin-bottom: 20px;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-style: italic;
+  }
+}

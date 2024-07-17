@@ -1,0 +1,9 @@
+<div class="file-upload-container">
+  <h2>Upload Users CSV</h2>
+  <input type="file" (change)="onFileSelected($event)" accept=".csv" #fileInput>
+  <button mat-raised-button color="primary" (click)="onUpload()" [disabled]="!selectedFile || (loading$ | async)">
+    {{ (loading$ | async) ? 'Uploading...' : 'Upload' }}
+  </button>
+  <p *ngIf="selectedFile">Selected file: {{ selectedFile.name }}</p>
+  <mat-progress-bar *ngIf="loading$ | async" mode="indeterminate"></mat-progress-bar>
+</div>
